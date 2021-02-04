@@ -1,4 +1,5 @@
 import React from 'react';
+
 class TabNav extends React.Component {
   render() {
     return (
@@ -6,9 +7,9 @@ class TabNav extends React.Component {
             <ul>
             {this.props.tabs.map(tab => {
                 return (
-                    <li key={ tab }>
+                    <li key={tab}>
                         <a href='#' onClick={ () => this.props.setSelected(tab) }>
-                            { tab }
+                            <h3>{tab}</h3>
                         </a>
                     </li>
                 );
@@ -18,4 +19,5 @@ class TabNav extends React.Component {
     );
   }
 }
+
 export default TabNav;

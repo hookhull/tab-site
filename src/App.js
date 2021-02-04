@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import './App.css';
-import Star from './assets/images/star1.png'
+import Star from './assets/images/star1.png';
 import TabNav from './components/TabNav';
 import Tab from './components/Tab';
 
@@ -24,7 +24,7 @@ export default class App extends React.Component {
           <a href="#">
             <img src={Star} alt="星" />
           </a>
-          <h2>株式会社H.H.</h2>
+          <h2>H.H.</h2>
         </div>
         <div className="header-right">
           <TabNav tabs={['ニュース', '作品情報', '概要', '採用技術', 'アクセス']} setSelected={ this.setSelected } />
@@ -33,7 +33,7 @@ export default class App extends React.Component {
       <div className="main">
         <div className="tab">
           <Tab isSelected={ this.state.selected === 'ニュース' }>
-            <div className='news'>
+            <div className='content-wrap'>
               <h2>最新ニュース</h2>
               <div className='news-content1'></div>
               <h2>その他</h2>
@@ -44,37 +44,71 @@ export default class App extends React.Component {
             </div>
           </Tab>
           <Tab isSelected={ this.state.selected === '作品情報' }>
-            <div className='works'>
+            <div className='content-wrap'>
               <h2>作品情報</h2>
               <div className='works-content1'></div>
             </div>
           </Tab>
           <Tab isSelected={ this.state.selected === '概要' }>
-            <ul>
-              <li>プロフィール</li>
-              <li>経歴</li>
-              <li>注力しているもの</li>
-              <li>モットー</li>
-            </ul>
+            <div className='content-wrap'>
+              <ul>
+                <li>プロフィール</li>
+                <li>経歴</li>
+                <li>注力しているもの</li>
+                <li>モットー</li>
+              </ul>
+            </div>
           </Tab>
           <Tab isSelected={ this.state.selected === '採用技術' }>
-            <div className='recruitment'>
+            <div className='content-wrap'>
               <div className='recruitment-content1'>
-                <table>
-                  <tbody>
+                <h2>採用技術</h2>
+                <p>様々な技術を採用し、意欲的に学習しています。</p>
+                <div className='table-wrap'>
+                  <table>
                     <tr>
-                      <th>フロントエンド</th>
+                      <th colspan='2' className='table-title'>フロントエンド</th>
                     </tr>
                     <tr>
                       <th>HTML&CSS</th>
-                      <td>少し</td>
+                      <td>『HTML&CSS標準入門』(おのれいこ他,MdN)等で学習。</td>
                     </tr>
                     <tr>
-                      <th>React</th>
+                      <th>JavaScript＆React</th>
                       <td>少し</td>
                     </tr>
-                  </tbody>
-                </table>
+                  </table>
+                </div>
+                <div className='table-wrap'>
+                  <table>
+                      <tr>
+                        <th colspan='2' className='table-title'>バックエンド</th>
+                      </tr>
+                      <tr>
+                        <th>Node.js＆Express</th>
+                        <td>少し</td>
+                      </tr>
+                      <tr>
+                        <th>SQLite3</th>
+                        <td>少し</td>
+                      </tr>
+                  </table>
+                </div>
+                <div className='table-wrap'>
+                  <table>
+                      <tr>
+                        <th colspan='2' className='table-title'>DevOps</th>
+                      </tr>
+                      <tr>
+                        <th>Git＆GitHub</th>
+                        <td>少し</td>
+                      </tr>
+                      <tr>
+                        <th>firebase</th>
+                        <td>少し</td>
+                      </tr>
+                  </table>
+                </div>
               </div>
             </div>
           </Tab>

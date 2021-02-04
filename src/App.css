@@ -1,11 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
 /*header*/
+
+* {
+  font-family: 'Yusei Magic', sans-serif;
+}
 
 .header {
   display: flex;
-  height: 80px;
   width: 100%;
+  height: 10vh;
   position: fixed;
-  background-color: rgba(255,255,255,1);
+  background: linear-gradient(to right, white, 75%, aqua);
   border-top: solid 1px rgba(0,255,255,1);
   border-bottom: solid 1px rgba(0,255,255,1);
   border-radius: 30px;
@@ -37,7 +43,7 @@
 .header-right {
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: flex-start;
   width: 50%;
 }
 
@@ -52,6 +58,11 @@
 
 .header-right a {
   text-decoration: none;
+  color: black;
+}
+
+.header-right a:hover {
+  border-bottom: 5px solid gold;
 }
 
 /*main*/
@@ -59,13 +70,11 @@
 .main {
   display: flex;
   justify-content: center;
-  padding-top: 80px;
+  padding-top: 10vh;
 }
 
-.news {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.content-wrap {
+
 }
 
 .news-content1 {
@@ -105,4 +114,32 @@
   margin: 10px;
   border: solid 1px rgba(0,255,255,1);
   border-radius: 10px;
+}
+
+.recruitment-content1 {
+  width: 100vh;
+}
+
+.table-wrap {
+  margin-top: 1vh;
+}
+
+.table-wrap table,th,td {
+  border: 1px solid chocolate;
+}
+
+.table-wrap table {
+  width: 100%;
+}
+
+.table-wrap th {
+  width: 30%;
+}
+
+.table-wrap td {
+  width: 70%;
+}
+
+.table-title {
+  background-color: chocolate;
 }
